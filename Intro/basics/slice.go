@@ -50,4 +50,13 @@ func main() {
 	fmt.Println("Length:", len(num))
 	fmt.Println("Capacity:", cap(num)) // capacity will double when length exceeds capacity
 	// capacity is automatically managed by Go runtime as we append elements to slice 
+
+	// creating slice from array
+	arr := [6]string{"A","B","C","D","E","F"}
+	slice1 := arr[1:4] // slice from index 1 to 3
+	fmt.Println("Slice1:", slice1)
+	slice2 := arr[:3] // slice from start to index 2
+	fmt.Println("Slice2:", slice2)
+	slice3 := arr[2:] // slice from index 2 to end
+	fmt.Println("Slice3:", slice3)
 }
